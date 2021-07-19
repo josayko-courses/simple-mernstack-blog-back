@@ -90,7 +90,7 @@ app.put('/api/blogs/:id', (req, res) => {
 
 app.use(unknownEndpoint);
 
-const PORT = 3080;
+const PORT = process.env.PORT || 3080;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
